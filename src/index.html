@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodePad</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="dark">
+
+  <div id="main-area">
+    <div id="editor"></div>
+    <div id="viz-divider"></div>
+    <div id="viz-pane">
+      <div id="viz-content"></div>
+    </div>
+  </div>
+
+  <div id="statusbar">
+    <span id="filename">untitled</span>
+    <div id="statusbar-right">
+      <select id="lang-picker" title="Language"></select>
+      <button id="viz-toggle" title="Toggle JSON visualizer (Ctrl+Shift+P)">{ }</button>
+      <select id="theme-picker" title="Theme"></select>
+      <span id="cursor-pos">Ln 1, Col 1</span>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
