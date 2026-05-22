@@ -315,6 +315,237 @@ export const THEMES = {
     ),
   },
 
+  // ── Catppuccin family ────────────────────────────────────────────────────
+
+  'Catppuccin Mocha': {
+    monacoId: 'catppuccin-mocha', isDark: true,
+    statusbar: '#313244', statusfg: '#cdd6f4',
+    viz: { key:'#89dceb', string:'#a6e3a1', number:'#fab387', boolean:'#cba6f7', null:'#cba6f7', punct:'#cdd6f4', count:'#6c7086', arrow:'#585b70', error:'#f38ba8', empty:'#6c7086' },
+    definition: def('vs-dark',
+      { 'editor.background':'#1e1e2e', 'editor.foreground':'#cdd6f4', 'editor.selectionBackground':'#45475a', 'editorCursor.foreground':'#f5e0dc', 'editor.lineHighlightBackground':'#313244' },
+      [
+        { token:'comment',                    foreground:'6c7086' },
+        { token:'keyword',                    foreground:'cba6f7' },
+        { token:'keyword.operator',           foreground:'89dceb' },
+        { token:'storage',                    foreground:'cba6f7' },
+        { token:'string',                     foreground:'a6e3a1' },
+        { token:'string.key.json',            foreground:'89dceb' },
+        { token:'number',                     foreground:'fab387' },
+        { token:'constant.numeric',           foreground:'fab387' },
+        { token:'constant.language',          foreground:'fab387' },
+        { token:'entity.name.function',       foreground:'89b4fa' },
+        { token:'entity.name.class',          foreground:'f38ba8' },
+        { token:'support.type',               foreground:'94e2d5' },
+        { token:'variable',                   foreground:'cdd6f4' },
+        { token:'entity.other.attribute-name',foreground:'89dceb' },
+      ]
+    ),
+  },
+
+  'Catppuccin Frappe': {
+    monacoId: 'catppuccin-frappe', isDark: true,
+    statusbar: '#292c3c', statusfg: '#c6d0f5',
+    viz: { key:'#99d1db', string:'#a6d189', number:'#ef9f76', boolean:'#ca9ee6', null:'#ca9ee6', punct:'#c6d0f5', count:'#737994', arrow:'#626880', error:'#e78284', empty:'#737994' },
+    definition: def('vs-dark',
+      { 'editor.background':'#303446', 'editor.foreground':'#c6d0f5', 'editor.selectionBackground':'#414559', 'editorCursor.foreground':'#f2d5cf', 'editor.lineHighlightBackground':'#292c3c' },
+      [
+        { token:'comment',                    foreground:'737994' },
+        { token:'keyword',                    foreground:'ca9ee6' },
+        { token:'keyword.operator',           foreground:'99d1db' },
+        { token:'storage',                    foreground:'ca9ee6' },
+        { token:'string',                     foreground:'a6d189' },
+        { token:'string.key.json',            foreground:'99d1db' },
+        { token:'number',                     foreground:'ef9f76' },
+        { token:'constant.numeric',           foreground:'ef9f76' },
+        { token:'constant.language',          foreground:'ef9f76' },
+        { token:'entity.name.function',       foreground:'8caaee' },
+        { token:'entity.name.class',          foreground:'e78284' },
+        { token:'support.type',               foreground:'81c8be' },
+        { token:'variable',                   foreground:'c6d0f5' },
+        { token:'entity.other.attribute-name',foreground:'99d1db' },
+      ]
+    ),
+  },
+
+  'Catppuccin Macchiato': {
+    monacoId: 'catppuccin-macchiato', isDark: true,
+    statusbar: '#1e2030', statusfg: '#cad3f5',
+    viz: { key:'#91d7e3', string:'#a6da95', number:'#f5a97f', boolean:'#c6a0f6', null:'#c6a0f6', punct:'#cad3f5', count:'#6e738d', arrow:'#5b6078', error:'#ed8796', empty:'#6e738d' },
+    definition: def('vs-dark',
+      { 'editor.background':'#24273a', 'editor.foreground':'#cad3f5', 'editor.selectionBackground':'#363a4f', 'editorCursor.foreground':'#f4dbd6', 'editor.lineHighlightBackground':'#1e2030' },
+      [
+        { token:'comment',                    foreground:'6e738d' },
+        { token:'keyword',                    foreground:'c6a0f6' },
+        { token:'keyword.operator',           foreground:'91d7e3' },
+        { token:'storage',                    foreground:'c6a0f6' },
+        { token:'string',                     foreground:'a6da95' },
+        { token:'string.key.json',            foreground:'91d7e3' },
+        { token:'number',                     foreground:'f5a97f' },
+        { token:'constant.numeric',           foreground:'f5a97f' },
+        { token:'constant.language',          foreground:'f5a97f' },
+        { token:'entity.name.function',       foreground:'8aadf4' },
+        { token:'entity.name.class',          foreground:'ed8796' },
+        { token:'support.type',               foreground:'8bd5ca' },
+        { token:'variable',                   foreground:'cad3f5' },
+        { token:'entity.other.attribute-name',foreground:'91d7e3' },
+      ]
+    ),
+  },
+
+  // ── Cyberpunk — dark ─────────────────────────────────────────────────────
+
+  'Tokyo Night': {
+    monacoId: 'tokyo-night', isDark: true,
+    statusbar: '#16161e', statusfg: '#7aa2f7',
+    viz: { key:'#7dcfff', string:'#9ece6a', number:'#ff9e64', boolean:'#bb9af7', null:'#bb9af7', punct:'#a9b1d6', count:'#565f89', arrow:'#414868', error:'#f7768e', empty:'#565f89' },
+    definition: def('vs-dark',
+      { 'editor.background':'#1a1b26', 'editor.foreground':'#a9b1d6', 'editor.selectionBackground':'#283457', 'editorCursor.foreground':'#c0caf5', 'editor.lineHighlightBackground':'#292e42' },
+      [
+        { token:'comment',                    foreground:'565f89' },
+        { token:'keyword',                    foreground:'bb9af7' },
+        { token:'keyword.operator',           foreground:'89ddff' },
+        { token:'storage',                    foreground:'bb9af7' },
+        { token:'string',                     foreground:'9ece6a' },
+        { token:'string.key.json',            foreground:'7dcfff' },
+        { token:'number',                     foreground:'ff9e64' },
+        { token:'constant.numeric',           foreground:'ff9e64' },
+        { token:'constant.language',          foreground:'ff9e64' },
+        { token:'entity.name.function',       foreground:'7aa2f7' },
+        { token:'entity.name.class',          foreground:'2ac3de' },
+        { token:'support.type',               foreground:'2ac3de' },
+        { token:'variable',                   foreground:'f7768e' },
+        { token:'entity.other.attribute-name',foreground:'73daca' },
+      ]
+    ),
+  },
+
+  'Synthwave \'84': {
+    monacoId: 'synthwave-84', isDark: true,
+    statusbar: '#2a1f3d', statusfg: '#ff7edb',
+    viz: { key:'#36f9f6', string:'#ff8b39', number:'#f97e72', boolean:'#fede5d', null:'#fede5d', punct:'#ffffff', count:'#848bbd', arrow:'#495495', error:'#fe4450', empty:'#848bbd' },
+    definition: def('vs-dark',
+      { 'editor.background':'#262335', 'editor.foreground':'#ffffff', 'editor.selectionBackground':'#3a2d5b', 'editorCursor.foreground':'#ff7edb', 'editor.lineHighlightBackground':'#2d2b55' },
+      [
+        { token:'comment',                    foreground:'848bbd' },
+        { token:'keyword',                    foreground:'ff7edb' },
+        { token:'keyword.operator',           foreground:'ff7edb' },
+        { token:'storage',                    foreground:'fede5d' },
+        { token:'string',                     foreground:'ff8b39' },
+        { token:'string.key.json',            foreground:'36f9f6' },
+        { token:'number',                     foreground:'f97e72' },
+        { token:'constant.numeric',           foreground:'f97e72' },
+        { token:'constant.language',          foreground:'fede5d' },
+        { token:'entity.name.function',       foreground:'36f9f6' },
+        { token:'entity.name.class',          foreground:'72f1b8' },
+        { token:'support.type',               foreground:'72f1b8' },
+        { token:'variable',                   foreground:'fe4450' },
+        { token:'entity.other.attribute-name',foreground:'36f9f6' },
+      ]
+    ),
+  },
+
+  'Cyberpunk 2077': {
+    monacoId: 'cyberpunk-2077', isDark: true,
+    statusbar: '#fcee0a', statusfg: '#0d0208',
+    viz: { key:'#01cdfe', string:'#05ffa1', number:'#ff71ce', boolean:'#fcee0a', null:'#fcee0a', punct:'#f0f0f0', count:'#454b6c', arrow:'#2a2d4a', error:'#ff2d55', empty:'#454b6c' },
+    definition: def('vs-dark',
+      { 'editor.background':'#0d0208', 'editor.foreground':'#f0f0f0', 'editor.selectionBackground':'#1a1a3e', 'editorCursor.foreground':'#fcee0a', 'editor.lineHighlightBackground':'#12121f' },
+      [
+        { token:'comment',                    foreground:'454b6c' },
+        { token:'keyword',                    foreground:'fcee0a' },
+        { token:'keyword.operator',           foreground:'01cdfe' },
+        { token:'storage',                    foreground:'fcee0a' },
+        { token:'string',                     foreground:'05ffa1' },
+        { token:'string.key.json',            foreground:'01cdfe' },
+        { token:'number',                     foreground:'ff71ce' },
+        { token:'constant.numeric',           foreground:'ff71ce' },
+        { token:'constant.language',          foreground:'b967ff' },
+        { token:'entity.name.function',       foreground:'01cdfe' },
+        { token:'entity.name.class',          foreground:'b967ff' },
+        { token:'support.type',               foreground:'b967ff' },
+        { token:'variable',                   foreground:'ff71ce' },
+        { token:'entity.other.attribute-name',foreground:'01cdfe' },
+      ]
+    ),
+  },
+
+  'Neon Noir': {
+    monacoId: 'neon-noir', isDark: true,
+    statusbar: '#1a0510', statusfg: '#ff2d78',
+    viz: { key:'#00d4ff', string:'#00ff9f', number:'#ff9f00', boolean:'#ff2d78', null:'#ff2d78', punct:'#e0e0e0', count:'#555555', arrow:'#333333', error:'#ff2d55', empty:'#555555' },
+    definition: def('vs-dark',
+      { 'editor.background':'#0d0d0d', 'editor.foreground':'#e8e8e8', 'editor.selectionBackground':'#2d0a1a', 'editorCursor.foreground':'#ff2d78', 'editor.lineHighlightBackground':'#1a1a1a' },
+      [
+        { token:'comment',                    foreground:'555555' },
+        { token:'keyword',                    foreground:'ff2d78' },
+        { token:'keyword.operator',           foreground:'00d4ff' },
+        { token:'storage',                    foreground:'ff2d78' },
+        { token:'string',                     foreground:'00ff9f' },
+        { token:'string.key.json',            foreground:'00d4ff' },
+        { token:'number',                     foreground:'ff9f00' },
+        { token:'constant.numeric',           foreground:'ff9f00' },
+        { token:'constant.language',          foreground:'bf5fff' },
+        { token:'entity.name.function',       foreground:'00d4ff' },
+        { token:'entity.name.class',          foreground:'bf5fff' },
+        { token:'support.type',               foreground:'bf5fff' },
+        { token:'variable',                   foreground:'ff2d78' },
+        { token:'entity.other.attribute-name',foreground:'00d4ff' },
+      ]
+    ),
+  },
+
+  // ── Cyberpunk — light ────────────────────────────────────────────────────
+
+  'Holographic': {
+    monacoId: 'holographic', isDark: false,
+    statusbar: '#7c3aed', statusfg: '#ffffff',
+    viz: { key:'#0891b2', string:'#0891b2', number:'#db2777', boolean:'#7c3aed', null:'#7c3aed', punct:'#0a0a2e', count:'#94a3b8', arrow:'#cbd5e1', error:'#dc2626', empty:'#94a3b8' },
+    definition: def('vs',
+      { 'editor.background':'#f8f9ff', 'editor.foreground':'#0a0a2e', 'editor.selectionBackground':'#ddd6fe', 'editorCursor.foreground':'#7c3aed', 'editor.lineHighlightBackground':'#f0ebff' },
+      [
+        { token:'comment',                    foreground:'94a3b8' },
+        { token:'keyword',                    foreground:'7c3aed' },
+        { token:'keyword.operator',           foreground:'0891b2' },
+        { token:'storage',                    foreground:'7c3aed' },
+        { token:'string',                     foreground:'0891b2' },
+        { token:'string.key.json',            foreground:'2563eb' },
+        { token:'number',                     foreground:'db2777' },
+        { token:'constant.numeric',           foreground:'db2777' },
+        { token:'constant.language',          foreground:'7c3aed' },
+        { token:'entity.name.function',       foreground:'2563eb' },
+        { token:'entity.name.class',          foreground:'059669' },
+        { token:'support.type',               foreground:'059669' },
+        { token:'variable',                   foreground:'0a0a2e' },
+        { token:'entity.other.attribute-name',foreground:'2563eb' },
+      ]
+    ),
+  },
+
+  'Neon Paper': {
+    monacoId: 'neon-paper', isDark: false,
+    statusbar: '#d400ff', statusfg: '#ffffff',
+    viz: { key:'#3a86ff', string:'#00b4d8', number:'#ff006e', boolean:'#d400ff', null:'#d400ff', punct:'#111111', count:'#adb5bd', arrow:'#ced4da', error:'#d00000', empty:'#adb5bd' },
+    definition: def('vs',
+      { 'editor.background':'#ffffff', 'editor.foreground':'#111111', 'editor.selectionBackground':'#e9d5ff', 'editorCursor.foreground':'#d400ff', 'editor.lineHighlightBackground':'#faf5ff' },
+      [
+        { token:'comment',                    foreground:'adb5bd' },
+        { token:'keyword',                    foreground:'d400ff' },
+        { token:'keyword.operator',           foreground:'3a86ff' },
+        { token:'storage',                    foreground:'d400ff' },
+        { token:'string',                     foreground:'00b4d8' },
+        { token:'string.key.json',            foreground:'3a86ff' },
+        { token:'number',                     foreground:'ff006e' },
+        { token:'constant.numeric',           foreground:'ff006e' },
+        { token:'constant.language',          foreground:'d400ff' },
+        { token:'entity.name.function',       foreground:'3a86ff' },
+        { token:'entity.name.class',          foreground:'06d6a0' },
+        { token:'support.type',               foreground:'06d6a0' },
+        { token:'variable',                   foreground:'111111' },
+        { token:'entity.other.attribute-name',foreground:'3a86ff' },
+      ]
+    ),
+  },
+
 };
 
 export const THEME_NAMES = Object.keys(THEMES);
