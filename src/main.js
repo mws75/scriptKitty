@@ -9,6 +9,7 @@ import { invoke }           from '@tauri-apps/api/core';
 import { getCurrentWindow } from '@tauri-apps/api/window';
 import { render as vizRender, setTheme as vizSetTheme } from './visualizer.js';
 import { THEMES, THEME_NAMES, DEFAULT_THEME, registerThemes } from './themes.js';
+import { format as formatSql } from 'sql-formatter';
 
 // ── Monaco worker setup ──────────────────────────────────────────────────
 self.MonacoEnvironment = {
@@ -29,6 +30,7 @@ let autoDetect   = true;
 const appWindow  = getCurrentWindow();
 
 // ── DOM refs ─────────────────────────────────────────────────────────────
+const prettifyBtn= document.getElementById('prettify-btn');
 const vizPane    = document.getElementById('viz-pane');
 const vizDivider = document.getElementById('viz-divider');
 const vizContent = document.getElementById('viz-content');
@@ -167,12 +169,9 @@ function applyTheme(name) {
   monaco.editor.setTheme(theme.monacoId);
   statusbar.style.background = theme.statusbar;
   statusbar.style.color      = theme.statusfg;
-  // propagate color to child text nodes / selects
   document.getElementById('filename').style.color   = theme.statusfg;
   document.getElementById('cursor-pos').style.color = theme.statusfg;
-  // drive body class for viz pane background + borders
   document.body.classList.toggle('light', !theme.isDark);
-  // update viz palette
   vizSetTheme(theme.viz);
   if (vizOpen) refreshViz();
 }
@@ -293,6 +292,21 @@ editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyO, openFile);
 editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyS, saveFile);
 editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyMod.Shift | monaco.KeyCode.KeyS, saveFileAs);
 editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyN, newFile);
+
+// ── Prettify ──────────────────────────────────────────────────────────────
+prettifyBtn.addEventListener('click', () => {
+  const lang = editor.getModel().getLanguageId();
+  const raw  = editor.getValue();
+  let result;
+  if (lang === 'json') {
+    try { result = JSON.stringify(JSON.parse(raw), null, 2); }
+    catch { /* invalid JSON — leave as-is */ }
+  } else if (lang === 'sql' || lang === 'mssql') {
+    result = formatSql(raw, { language: 'sql', tabWidth: 4, keywordCase: 'upper' });
+  }
+  if (result !== undefined) editor.setValue(result);
+  editor.focus();
+});
 
 // ── Init ──────────────────────────────────────────────────────────────────
 setPath(null);

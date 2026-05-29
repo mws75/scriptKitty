@@ -16,6 +16,7 @@
   "dependencies": {
     "@tauri-apps/api": "^2.11.0",
     "@tauri-apps/plugin-dialog": "^2.7.1",
-    "monaco-editor": "^0.55.1"
+    "monaco-editor": "^0.55.1",
+    "sql-formatter": "^15.8.0"
   }
 }

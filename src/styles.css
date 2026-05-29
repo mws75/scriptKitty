@@ -169,6 +169,21 @@ body.light .viz-children {
 #language    { opacity: 0.82; text-transform: lowercase; }
 #cursor-pos  { opacity: 0.82; font-variant-numeric: tabular-nums; }
 
+#prettify-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 1px 7px;
+  border-radius: 3px;
+  color: rgba(255,255,255,0.85);
+  font-size: 11px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  transition: background 0.15s, color 0.15s;
+  line-height: 1;
+  white-space: nowrap;
+}
+#prettify-btn:hover { background: rgba(255,255,255,0.15); color: #ffffff; }
+
 #viz-toggle {
   background: transparent;
   border: none;
@@ -215,3 +230,4 @@ body.light .viz-children {
   background: #1e1e1e;
   color: #d4d4d4;
 }
+

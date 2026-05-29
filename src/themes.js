@@ -553,9 +553,14 @@ export const DEFAULT_THEME = 'VSCode Dark+';
 
 /** Register all custom themes with Monaco. Call once at startup. */
 export function registerThemes(monaco) {
-  for (const [, theme] of Object.entries(THEMES)) {
+  for (const [name, theme] of Object.entries(THEMES)) {
     if (theme.definition) {
-      monaco.editor.defineTheme(theme.monacoId, theme.definition);
+      try {
+        monaco.editor.defineTheme(theme.monacoId, theme.definition);
+        console.log(`[themes] registered: ${name} (${theme.monacoId})`);
+      } catch (e) {
+        console.error(`[themes] FAILED: ${name}`, e);
+      }
     }
   }
 }

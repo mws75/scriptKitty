@@ -20,11 +20,23 @@
     <span id="filename">untitled</span>
     <div id="statusbar-right">
       <select id="lang-picker" title="Language"></select>
+      <button id="prettify-btn" title="Prettify (JSON / SQL)">✦ Prettify</button>
       <button id="viz-toggle" title="Toggle JSON visualizer (Ctrl+Shift+P)">{ }</button>
       <select id="theme-picker" title="Theme"></select>
       <span id="cursor-pos">Ln 1, Col 1</span>
     </div>
   </div>
+
+  <!-- SVG filter for glass edge displacement -->
+  <svg style="position:absolute;width:0;height:0;overflow:hidden;" aria-hidden="true">
+    <defs>
+      <filter id="glass-edge" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="3" result="noise" />
+        <feGaussianBlur in="noise" stdDeviation="5" result="smoothNoise" />
+        <feDisplacementMap in="SourceGraphic" in2="smoothNoise" scale="22" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
 
   <script type="module" src="/main.js"></script>
 </body>
